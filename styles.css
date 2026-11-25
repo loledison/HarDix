@@ -592,6 +592,12 @@ section.content-section {
     text-align:center;
 }
 
+.installation-guide {
+    margin-top:70px;
+    padding-top:55px;
+    border-top:1px solid var(--border);
+}
+
 .phone-frame {
     position:relative;
     width:min(100%,220px);
