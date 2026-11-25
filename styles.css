@@ -732,6 +732,14 @@ section.content-section {
     margin-bottom:10px;
 }
 
+.step-download-link {
+    color:var(--green);
+}
+
+.step-download-link:hover {
+    color:var(--green-hover);
+}
+
 .step p {
     font-size:14px;
     color:var(--muted);
