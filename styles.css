@@ -18,6 +18,8 @@
     --focus-border:#52815e;
     --latest-border:#365b40;
     --mobile-nav-bg:#101711;
+    --download-icon-bg:#d8ffe4;
+    --download-icon-fg:#155d31;
 }
 
 :root[data-theme="light"] {
@@ -40,6 +42,8 @@
     --focus-border:#498b59;
     --latest-border:#a9c9ae;
     --mobile-nav-bg:#ffffff;
+    --download-icon-bg:#e4f2e7;
+    --download-icon-fg:#176d37;
 }
 
 * { margin:0; padding:0; box-sizing:border-box; }
@@ -139,12 +143,42 @@ nav {
 }
 
 .nav-download {
+    display:inline-flex;
+    align-items:center;
+    gap:9px;
     padding:10px 18px;
     border:1px solid var(--green);
     border-radius:7px;
     background:var(--green);
     color:var(--button-text)!important;
     transition:filter .2s,transform .2s;
+}
+
+.nav-download-arrow {
+    width:27px;
+    height:27px;
+    display:grid;
+    place-items:center;
+    border:1px solid var(--download-icon-bg);
+    border-radius:50%;
+    background:var(--download-icon-bg);
+    transition:transform .2s,background .2s;
+}
+
+.nav-download-arrow svg {
+    width:15px;
+    height:15px;
+    fill:none;
+    stroke:var(--download-icon-fg);
+    stroke-width:2;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+}
+
+.nav-download:hover .nav-download-arrow,
+.download-apk:hover .nav-download-arrow {
+    transform:translateY(2px);
+    filter:brightness(.92);
 }
 
 .nav-download:hover {
